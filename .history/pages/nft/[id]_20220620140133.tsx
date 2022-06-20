@@ -2,7 +2,6 @@ import React from 'react'
 import { useAddress, useDisconnect, useMetamask } from "@thirdweb-dev/react";
 import {GetServerSideProps} from 'next'
 import {sanityClient, urlFor} from '../../sanity'
-import Link from 'next/link';
 
 
 interface Props {collection:Collection}
@@ -25,17 +24,15 @@ function NFTPage({collection}: Props) {
                     </div>
                     <div className='text-center p-5 space-y-2'>
                         <h1 className="text-4xl font-bold text-white">{collection.nftCollectionName} </h1>
-                        <h2 className="text-xl text-white">{collection.description}</h2>
+                        <h2 className="text-xl text-white">{Only for coffee lovers who love everything coffee}</h2>
                     </div>
                 </div>
             </div>
             <div className='lg:col-span-6 flex flex-1 flex-col p-5'>
                 <div className='flex items-center justify-between'>
-                    <Link href={'/'}>
                     <h1 className="w-52 text-xl font-light sm:w-80 cursor-pointer">
                         <span className='underline decoration-orange-300 font-extrabold'>Coffee NFTs</span>{''} Market Place 
                     </h1>
-                    </Link>
                     <button 
                         onClick={() => address ? disconnect() : connectWithMetamask()}
                         className='rounded-full bg-orange-500 text-xs text-white font-bold px-4 py-2 lg:px-5 lg:py-3 lg:text-base'>

@@ -31,7 +31,7 @@ function NFTPage({collection}: Props) {
             </div>
             <div className='lg:col-span-6 flex flex-1 flex-col p-5'>
                 <div className='flex items-center justify-between'>
-                    <Link href={'/'}>
+                    <Link href>
                     <h1 className="w-52 text-xl font-light sm:w-80 cursor-pointer">
                         <span className='underline decoration-orange-300 font-extrabold'>Coffee NFTs</span>{''} Market Place 
                     </h1>

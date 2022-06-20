@@ -24,7 +24,7 @@ const Home: NextPage = ({collections}:Props) => {
         <div className="grid space-x-3 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           <div className="flex flex-col items-center cursor-pointer transition-all duration-200 hover:scale-105">
             {collections.map(collection => (
-              <Link href={`/nft/${collection.slug.current}`}>
+              <Link href=``
               <div>
                 <img 
                 className="h-96 w-60 rounded-2xl object-cover"
@@ -35,7 +35,6 @@ const Home: NextPage = ({collections}:Props) => {
                   <p className="mt-2 text-sm text-gray-500">{collection.description}</p>
                 </div>
               </div>
-              </Link>
             ))}
           </div>
         </div>

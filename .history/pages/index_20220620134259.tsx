@@ -35,7 +35,6 @@ const Home: NextPage = ({collections}:Props) => {
                   <p className="mt-2 text-sm text-gray-500">{collection.description}</p>
                 </div>
               </div>
-              </Link>
             ))}
           </div>
         </div>
