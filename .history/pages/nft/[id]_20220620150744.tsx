@@ -87,8 +87,7 @@ export const getServerSideProps: GetServerSideProps = async ({params}) => {
             name,
             address,
             slug {
-                current
-            },
+                current},
         },
     }`
     const collection = await sanityClient.fetch(query, {
@@ -97,11 +96,5 @@ export const getServerSideProps: GetServerSideProps = async ({params}) => {
 
     if(!collection){
         return{notFound:true}
-    }
-
-    return {
-        props: {
-            collection
-        }
     }
 }

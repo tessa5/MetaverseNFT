@@ -103,5 +103,5 @@ export const getServerSideProps: GetServerSideProps = async ({params}) => {
         props: {
             collection
         }
-    }
+      }
 }

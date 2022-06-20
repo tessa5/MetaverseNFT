@@ -98,10 +98,4 @@ export const getServerSideProps: GetServerSideProps = async ({params}) => {
     if(!collection){
         return{notFound:true}
     }
-
-    return {
-        props: {
-            collection
-        }
-    }
 }

@@ -3,7 +3,6 @@ import { useAddress, useDisconnect, useMetamask } from "@thirdweb-dev/react";
 import {GetServerSideProps} from 'next'
 import {sanityClient, urlFor} from '../../sanity'
 import Link from 'next/link';
-import { Collection } from '../../typings';
 
 
 
@@ -76,19 +75,13 @@ export const getServerSideProps: GetServerSideProps = async ({params}) => {
         mainImage {
             asset
         },
-        previewImage{
-            asset
-        },
-        slug {
-            current
-        },
+        previewImage{asset},
+        slug {current},
         creator-> {
             _id,
             name,
             address,
-            slug {
-                current
-            },
+            slug {current},
         },
     }`
     const collection = await sanityClient.fetch(query, {
@@ -97,11 +90,5 @@ export const getServerSideProps: GetServerSideProps = async ({params}) => {
 
     if(!collection){
         return{notFound:true}
-    }
-
-    return {
-        props: {
-            collection
-        }
     }
 }
